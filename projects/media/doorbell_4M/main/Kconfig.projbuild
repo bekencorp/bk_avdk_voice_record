@@ -1,0 +1,12 @@
+menu "INTEGRATION_DOORBELL"
+
+    config INTEGRATION_DOORBELL
+        bool "Doorbell integration"
+        depends on MEDIA
+        default n
+    config INTEGRATION_DOORBELL_CS2
+        bool "Doorbell integration CS2"
+        depends on MEDIA
+        default n
+		
+endmenu

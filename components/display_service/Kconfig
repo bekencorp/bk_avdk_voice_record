@@ -1,0 +1,26 @@
+menu "Display Service"
+
+	config MEDIA_DISPLAY_SERVICE
+		depends on SYS_CPU1
+        depends on MEDIA
+		bool "Enable Display Service"
+		default y
+
+	config LCD_SPI_DISPLAY
+		depends on SPI
+		bool "Enable LCD SPI Display"
+		default n
+
+	config LCD_SPI_TE
+		bool "Enable LCD SPI TE"
+		default n
+
+	config LCD_EXAMPLE
+		depends on SPI
+		bool "Enable LCD SPI Display"
+		default n
+
+	config LCD_TE_ENABLE
+		bool "Enable te gpio check function for mcu8080 lcd"
+		default n
+endmenu

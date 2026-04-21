@@ -1,0 +1,147 @@
+#@ Enable psram
+CONFIG_PSRAM=n
+#@ Enable psram malloc for media
+CONFIG_PSRAM_MEDIA_MALLOC_ENABLE=n
+# CPU
+#@ CPU0 RAM size for SPE
+CONFIG_CPU0_SPE_RAM_SIZE=0x60000
+#@ CPU1 app RAM size
+CONFIG_CPU1_APP_RAM_SIZE=0x40000
+#@ CPU2 app RAM size
+#CONFIG_CPU2_APP_RAM_SIZE=0xB800
+
+# Audio
+#@ Audio ring buff safe interval
+CONFIG_AUD_RING_BUFF_SAFE_INTERVAL=4
+#@ Enable I2S
+CONFIG_I2S=n
+#@ Enable I2S Test
+CONFIG_I2S_TEST=n
+#@ Enable Audio driver test
+CONFIG_AUDIO_TEST=n
+#@ Audio Transfer DAC PA Control Enable
+CONFIG_AUD_TRAS_DAC_PA_CTRL=y
+#@ Enable Audio use psram audio heap
+CONFIG_AUD_TRAS_USE_AUDIO_HEAP=n
+#@ Enable Audio use sram
+CONFIG_AUD_TRAS_USE_SRAM=y
+
+# DVP CAMERA
+#@ Disable camera interface
+CONFIG_DVP_CAMERA=n
+#@ The value should be changed if need to change i2c id
+CONFIG_DVP_CAMERA_I2C_ID=1
+#@ Disable dvp camera power gpio ctrl
+CONFIG_DVP_POWER_GPIO_CTRL=n
+#@ the gpio id control dvp camera power
+CONFIG_DVP_CTRL_POWER_GPIO_ID=28
+
+#
+# USB configuration
+#
+#@ Enable USB
+CONFIG_USB=y
+#@ USB VBAT CONTROL GPIO ID
+CONFIG_USB_VBAT_CONTROL_GPIO_ID=0x14
+#@ CHERRY_USB
+CONFIG_CHERRY_USB=y
+#@ Enable USB Host Mode
+CONFIG_USB_HOST=y
+#@ Priority of USB task
+CONFIG_TASK_USB_PRIO=2
+#@ Enable Usb Uvc
+CONFIG_USB_UVC=y
+#@ Enable Usb Uac
+CONFIG_USB_UAC=y
+#@ Enable Usb Uac Mic
+CONFIG_USB_UAC_MIC=y
+#@ Enable Usb Uac Speaker
+CONFIG_USB_UAC_SPEAKER=y
+CONFIG_UVC_UAC_DEMO=y
+#@ Set Usb urb num
+CONFIG_UVC_NUM_PACKET_PER_URB=4
+CONFIG_UVC_URB_NUM=3
+#@ Enable Only use the port of the USB roothub
+CONFIG_USBH_ONLY_USE_THE_ROOTHUB_PORT_ENABLE=y
+#@ Enable MULTIPLE DEVICE IDENTIFICATION by hub
+CONFIG_USB_HUB_MULTIPLE_DEVICES=y
+#@ HUB MAX EHPORTS
+CONFIG_USBHOST_HUB_MAX_EHPORTS=4
+#@ SUPPORT_MAX_DEVICE
+CONFIG_USBHOST_HUB_PORT_SUPPORT_MAX_DEVICE=5
+#@ USB usb hub port index Vbus control gpio_id
+CONFIG_USBHOST_HUB_PORT_1_VBAT_CONTROL_GPIO_ID=0
+#@ Enable Usb Cdc
+CONFIG_USB_CDC=n
+#@ This macro needs to be opened on cp0 and cp1 when USB in cp1.
+CONFIG_USB_CDC_ACM_DEMO=n
+#@ the num for CDC
+CONFIG_USBHOST_MAX_CDC_ACM_CLASS=1
+# end of USB configuration
+
+# BT & Multimedia
+#@ BT reuse media memory at beging of cpu1
+CONFIG_BT_REUSE_MEDIA_MEMORY=n
+#@ BT reuse media memory size
+CONFIG_BT_REUSE_MEDIA_MEM_SIZE=0x1B000
+
+# YUV_BUF/H264/JPEGENC
+#@ Disable yuv_buf
+CONFIG_YUV_BUF=n
+#@ Disable h264
+CONFIG_H264=n
+#@ Disable HardWare JPEG ENCODE
+CONFIG_JPEGENC_HW=n
+#@ set h264 compress quality level
+CONFIG_H264_QUALITY_LEVEL=2
+
+# LCD
+#@ Enable Lcd hw decode
+CONFIG_SW_ROTATE_TO_YUYV_AND_DMA2D_TO_YUYV_NOT_RGB888=y
+
+# DMA
+#@ 4
+CONFIG_DMA_LOGIC_CHAN_CNT=5
+#@ 0
+CONFIG_DMA_LOGIC_CHAN_ID_MIN=4
+
+# Media
+#@ video data in dtcm
+CONFIG_VIDEO_DTCM=y
+#@ Enable Lcd scale
+CONFIG_MEDIA_SCALE=y
+#@ Enable Lcd scale
+CONFIG_MEDIA_PIPELINE=y
+#@ Set frame size
+CONFIG_JPEG_FRAME_SIZE=15360
+
+# Image storage
+#@ enable image save and read image
+CONFIG_IMAGE_STORAGE=n
+
+# Video transfer
+#@ Enable Wifi Transfer
+CONFIG_WIFI_TRANSFER=y
+#@ Enable usb Transfer
+CONFIG_USB_TRANSFER=n
+
+# FLASH
+#@ Enable Override Flash Partition
+CONFIG_OVERRIDE_FLASH_PARTITION=y
+
+#@ Enable Software Decode Sram Mapping
+CONFIG_SOFTWARE_DECODE_SRAM_MAPPING=y
+
+
+CONFIG_LCD_PARTIAL_DISPLAY=y
+
+
+CONFIG_LCD_QSPI=y
+CONFIG_LCD_QSPI_JD9853A=y
+CONFIG_LCD_QSPI_TE=y
+CONFIG_LCD_QSPI_TE_PIN=6
+CONFIG_LCD_BACKLIGHT_GPIO=43
+CONFIG_LCD_QSPI_RESET_PIN=40
+CONFIG_GPIO_DEFAULT_SET_SUPPORT=y
+CONFIG_USR_GPIO_CFG_EN=y
+

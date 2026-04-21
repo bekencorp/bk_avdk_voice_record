@@ -1,0 +1,41 @@
+menu "INTEGRATION_DOORBELL"
+
+    config INTEGRATION_DOORBELL
+        bool "Doorbell integration"
+        default n
+    config INTEGRATION_DOORBELL_CS2
+        bool "Doorbell integration CS2"
+        default n
+
+    config LCD_SPI_REFRESH_WITH_QSPI_MAPPING_MODE
+        bool "Enabel LCD SPI refresh with qspi mapping mode "
+        default n
+
+    config LCD_SPI_BACKLIGHT_PIN
+        int "Set LCD SPI backlight pin"
+        default 43
+
+    config LCD_SPI_RESET_PIN
+        int "Set LCD SPI reset pin"
+        default 40
+
+    config LCD_SPI_DC_PIN
+        int "Set LCD SPI DC pin"
+        default 25
+
+    config LCD_SPI_TE_PIN
+        int "Set LCD SPI TE pin"
+        default 6
+
+    config LCD_BACKLIGHT_GPIO
+        int "Set LCD QSPI backlight pin"
+        default 43
+
+    config LCD_QSPI_RESET_PIN
+        int "Set LCD QSPI reset pin"
+        default 40
+
+    config LCD_QSPI_TE_PIN
+        int "Set LCD QSPI TE pin"
+        default 6
+endmenu
